@@ -10,10 +10,11 @@ class m210308_170651_create_tag_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeUp()
+    public function up()
     {
-        $this->createTable('{{%tag}}', [
-            'id' => $this->primaryKey(),
+        $this->createTable('tag', [
+            'id'        => $this->primaryKey(),
+            'title'     => $this->string(),
         ]);
     }
 
